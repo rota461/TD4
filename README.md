@@ -1,2 +1,2 @@
 #Introduction
-Build TD-4 in DE0-CV.
+Build TD-4 on DE0-CV.
