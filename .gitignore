@@ -1,10 +1,11 @@
 *.qsf
 c5_pin_model_dump.txt
 *.qws
-inremental_db/
+incremental_db/
 output_files/
 stp2.stp
 *.qpf
 db/
 devkits/
 *.txt
+*.json
