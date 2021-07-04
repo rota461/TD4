@@ -1,11 +1,11 @@
 module rom(
     input clk, rst,
-    input [3:0] adr,
+    input [3:0] addr,
     output reg[7:0] qd
 );
 
 always @* begin
-    case(adr)
+    case(addr)
         4'b0000: qd <= 8'b10110011;
         4'b0001: qd <= 8'b10110110;
         4'b0010: qd <= 8'b10111100;

@@ -1,5 +1,5 @@
 module cflg(
-    input clk,rst
+    input clk,rst,
     input ci,
     output reg q
 );

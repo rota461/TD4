@@ -1,14 +1,14 @@
 module io(
-    input clk,rst,load
+    input clk,rst,load,
     input [3:0] di,
-    output reg [3:0] LEDR,
+    output reg [9:0] LEDR
 );
 
-always @(posedge ckl) begin
+always @(posedge clk) begin
     if(rst)
-        LEDR <= 4'b0000;
+        LEDR = 4'b0000;
     else if(!load)
-        LEDR <= di;
+        LEDR = di;
 end
 
 endmodule

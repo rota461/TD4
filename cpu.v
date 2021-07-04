@@ -1,8 +1,9 @@
 module cpu(
-    input CLK, RST
+    input CLK, RST,
+    output [9:0] LEDR
 );
 
-wire clk
+wire clk;
 wire [3:0] addr;
 wire [7:0] data_bus;
 wire cflg;
@@ -27,10 +28,10 @@ rom rom(
     .qd(data_bus)
 );
 
-cnt cnt(
+counter counter(
     .clk(clk), 
     .rst(RST),
-    .load(load[3])
+    .load(load[3]),
     .di(adder_out),
     .qd(addr)
 );
@@ -66,11 +67,12 @@ register b_reg(
     .qd(b)
 );
 
-io out(
+io out_put(
     .clk(clk),
     .rst(RST),
+    .di(adder_out),
     .load(load[2]),
-    .d(adder_out),
+    .LEDR(LEDR)
 );
 
 adder adder(

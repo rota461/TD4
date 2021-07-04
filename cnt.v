@@ -1,5 +1,5 @@
 module counter(
-    input clk,rst,load
+    input clk,rst,load,
     input [3:0] di,
     output reg [3:0] qd
 );
